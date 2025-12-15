@@ -1,11 +1,24 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
+  background: linear-gradient(145deg, #0f0f0f, #000000);
+  color: white;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.featureIcon:hover {
+  transform: scale(1.2) rotate(10deg);
+  background: rgba(255, 215, 0, 0.2);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }

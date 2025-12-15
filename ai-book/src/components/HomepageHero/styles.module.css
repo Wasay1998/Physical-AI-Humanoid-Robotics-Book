@@ -1,0 +1,159 @@
+
+.heroBanner {
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ifm-global-border-color);
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  color: var(--ifm-heading-color);
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ifm-font-color-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.heroVisual {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.heroVisual img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 6rem 0;
+  }
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.robotHead {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.robotHeadMain {
+  width: 160px;
+  height: 120px;
+  background: linear-gradient(145deg, #333, #000);
+  border-radius: 50% 50% 40% 40%;
+  position: relative;
+  border: 2px solid var(--ifm-color-primary);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.robotEyes {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+  position: absolute;
+  top: 50px;
+}
+
+.robotEye {
+  width: 20px;
+  height: 20px;
+  background: var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: blink 4s infinite;
+  box-shadow: 0 0 10px var(--ifm-color-primary);
+}
+
+.robotMouth {
+  width: 60px;
+  height: 8px;
+  background: var(--ifm-color-primary);
+  border-radius: 4px;
+  margin-top: 60px;
+  position: absolute;
+  bottom: 30px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes blink {
+  0%, 45%, 55%, 100% { height: 20px; }
+  48%, 52% { height: 2px; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@media screen and (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+
+  .robotHead {
+    width: 150px;
+    height: 150px;
+  }
+
+  .robotHeadMain {
+    width: 120px;
+    height: 90px;
+  }
+
+  .robotEyes {
+    gap: 20px;
+    top: 35px;
+  }
+
+  .robotEye {
+    width: 15px;
+    height: 15px;
+  }
+
+  .robotMouth {
+    width: 45px;
+    height: 6px;
+    bottom: 25px;
+  }
+}

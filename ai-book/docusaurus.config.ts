@@ -4,8 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Physical AI & Humanoid Robotics',
-  tagline: 'A textbook for beginner–intermediate learners',
-  favicon: 'img/favicon.ico',
+  tagline: 'Building the Future, One Robot at a Time',
+  favicon: 'img/logo.svg',
 
   future: {
     v4: true,
@@ -14,10 +14,9 @@ const config: Config = {
   url: 'https://your-docusaurus-site.example.com',
   baseUrl: '/',
 
-  organizationName: 'your-github-username', // Replace with your GitHub username
-  projectName: 'ai-book', // Replace with your repo name
+  organizationName: 'your-github-username', 
+  projectName: 'ai-book', 
 
-  // Temporarily warn for broken links
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
@@ -32,9 +31,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/your-github-username/ai-book/edit/main/ai-book/',
+          routeBasePath: '/', // Set docs as the root path
         },
-        blog: false, // Disable blog for now to prevent broken links
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -45,20 +44,23 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Physical AI',
+      title: 'Physical AI & Humanoid Robotics',
       logo: {
-        alt: 'Physical AI Logo',
+        alt: 'Physical AI & Humanoid Robotics Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/capstone-project',
+          label: 'Book',
           position: 'left',
-          label: 'Tutorial',
+          type: 'doc',
+          docId: 'capstone-project'
         },
         {
           href: 'https://github.com/your-github-username/ai-book',
@@ -69,48 +71,12 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/', // Updated to match your intro page
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/your-github-username/ai-book',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI Project. Built with Docusaurus.`,
+      links: [],
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      darkTheme: prismThemes.vsDark,
     },
   } satisfies Preset.ThemeConfig,
 };

@@ -8,4 +8,9 @@ Welcome to the first chapter of Module 1: ROS 2. In this chapter, we will lay th
 
 This chapter will introduce you to the core concepts of ROS 2, including the fundamental communication mechanisms such as nodes, topics, services, and actions. You will learn how these components interact to form a distributed system that can control and sense a robot. We will also cover the basic setup of a ROS 2 workspace, allowing you to begin developing your own robot applications.
 
+<div className="diagram-placeholder">
+  <p className="diagram-placeholder-text">Diagram 1.1: High-level Architecture of ROS 2 Communication</p>
+  {/* Placeholder for an actual diagram image or SVG */}
+</div>
+
 The lessons within this chapter will guide you through hands-on exercises, enabling you to gain practical experience with ROS 2. By the end of this chapter, you will have a solid understanding of ROS 2's architecture and be prepared to explore more advanced topics in robot programming.
