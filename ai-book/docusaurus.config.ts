@@ -14,8 +14,8 @@ const config: Config = {
   url: 'https://your-docusaurus-site.example.com',
   baseUrl: '/',
 
-  organizationName: 'your-github-username', 
-  projectName: 'ai-book', 
+  organizationName: 'your-github-username',
+  projectName: 'ai-book',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -23,6 +23,11 @@ const config: Config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  // Custom fields accessible in React components
+  customFields: {
+    apiKey: process.env.REACT_APP_API_KEY || 'your-default-api-key',
   },
 
   presets: [

@@ -77,11 +77,11 @@ const ChatBot: React.FC = () => {
       };
 
       // Make the API call to the backend
-      const response = await fetch('http://127.0.0.1:8000/api/v1/query', {
+      const response = await fetch('http://127.0.0.1:8000', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-API-Key': process.env.REACT_APP_API_KEY || 'your-default-api-key', // Use API key from env
+          'X-API-Key': process.env.COHERE_API_KEY || 'your-default-api-key', // Use API key from env
         },
         body: JSON.stringify(requestBody),
       });
@@ -210,4 +210,4 @@ const ChatBot: React.FC = () => {
   );
 };
 
-export default ChatBot;
+export default ChatBot; 
