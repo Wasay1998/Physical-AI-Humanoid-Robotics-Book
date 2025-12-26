@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://physical-ai-humanoid-robotics-book-nine-lake.vercel.app/',
   baseUrl: '/',
 
   organizationName: 'your-github-username', 
